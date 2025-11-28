@@ -16,7 +16,7 @@ export default function Home() {
           <h1>HI, I AM<br/>COSMAS ONYEKWELU.</h1>
 
           <p className="lead">
-            Full-stack & front-end engineer crafting accessible, fast, and user-friendly digital products.
+            Full-stack engineer crafting accessible, fast, and user-friendly digital products.
           </p>
 
           <div className="actions">
@@ -159,7 +159,7 @@ export default function Home() {
         <h2>ABOUT ME</h2>
 
         <p>
-          I am a full-stack & front-end engineer based in Nigeria, passionate about 
+          I am a full-stack engineer based in Nigeria, passionate about 
           building accessible and performant digital products.  
           I focus on clean architecture, reusability, and user-first experiences.  
           When not coding, I enjoy learning new tools, UI design, and exploring tech innovations.
