@@ -89,6 +89,49 @@
   gap: 20px;
   margin: 10px 0;
 }
+.link-live {
+  color: var(--accent);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.git-icon,
+.icon {
+  font-size: 18px;
+}
+
+/* ABOUT PREVIEW */
+.about-preview {
+  padding: 60px 0;
+}
+
+.about-preview h2 {
+  margin-bottom: 16px;
+}
+
+.about-preview p {
+  max-width: 620px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+.about-link {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
 
 @media (max-width: 900px) {
   .hero {
