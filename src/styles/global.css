@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #0b0b0b;
+  --card: #0f0f0f;
+  --muted: #bdbdbd;
+  --accent: #d6f05a;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+h1, h2, h3 {
+  font-family: Oswald, Inter, Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 0.95;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #0b0b0b;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    padding: 20px 16px;
+  }
+}
