@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa6";
-import { FiArrowUpRight } from "react-icons/fi"; // LIVE DEMO arrow icon
+import { FiArrowUpRight } from "react-icons/fi";
 import "../styles/home.css";
 import SocialIcons from "../components/SocialIcons";
 import Button from "../components/Button";

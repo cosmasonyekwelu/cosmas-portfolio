@@ -1,69 +1,125 @@
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  padding: 60px 0;
-  background: transparent;
+  background: #000;
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
   align-items: flex-start;
+  gap: 50px;
 }
 
-.footer-inner h3 {
+/* LEFT COLUMN */
+.footer-left h3 {
   font-family: Oswald, sans-serif;
-  font-size: 36px;
-  color: #fff;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
 }
 
-.social-row a {
-  display: inline-block;
-  margin-right: 12px;
-  background: var(--card);
-  padding: 8px 12px;
-  border-radius: 8px;
+.footer-text {
+  font-size: 15px;
+  margin: 6px 0;
+  color: #C7C7C7;
+;
+}
+
+.footer-text a {
+  color: #FFFFFF;
+  border-bottom: 1px solid var(--accent);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 22px;
+  margin: 20px 0;
+}
+
+.footer-icons a {
+  font-size: 28px;
   color: var(--accent);
-  font-weight: 600;
-  font-size: 14px;
+  display: inline-flex;
 }
 
+.copyright-bottom {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0;
+  margin-top: 220px;
+  color: #C7C7C7;
+  height: 26px;
+
+  opacity: 1;
+}
+
+/* RIGHT COLUMN (FORM) */
 .footer-form {
+  width: 420px;
   display: flex;
   flex-direction: column;
-  width: 420px;
-  gap: 12px;
+  gap: 14px;
+}
+
+.footer-form label {
+  font-size: 14px;
+  color: #bbb;
 }
 
 .footer-form input,
 .footer-form textarea {
-  background: #151515;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 14px;
   border-radius: 6px;
-  color: #fff;
-  font-size: 14px;
+  color: white;
+  font-size: 15px;
 }
 
 .footer-form textarea {
-  min-height: 120px;
-  resize: vertical;
+  height: 140px;
+  resize: none;
 }
 
 .btn.submit {
+  margin-top: 10px;
+  width: 150px;
   background: var(--accent);
-  margin-top: 8px;
-  width: 130px;
-  color: #0b0b0b;
+  color: #000;
   font-weight: 700;
+  border-radius: 999px;
 }
 
+.success {
+  margin-top: 10px;
+  color: #baf08b;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  opacity: 0.8;
+}
+ 
+/* MOBILE */
 @media (max-width: 900px) {
   .footer-inner {
     flex-direction: column;
+    gap: 40px;
   }
 
   .footer-form {
     width: 100%;
+  }
+
+  .footer-left h3 {
+    font-size: 34px;
   }
 }
