@@ -13,7 +13,40 @@ export default function Footer() {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 
+  // NEW: validation state
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   if (pathname === "/contact") return null;
+
+  function validateForm(data) {
+    const newErrors = {};
+
+    // NAME
+    if (!data.get("name")?.trim()) {
+      newErrors.name = "Name is required.";
+    }
+
+    // EMAIL
+    const email = data.get("email")?.trim();
+    if (!email) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    // MESSAGE
+    if (!data.get("message")?.trim()) {
+      newErrors.message = "Message cannot be empty.";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  }
 
   async function handleFooterSubmit(e) {
     e.preventDefault();
@@ -21,6 +54,13 @@ export default function Footer() {
     setLoading(true);
 
     const data = new FormData(e.target);
+
+    // VALIDATE FIRST
+    const isValid = validateForm(data);
+    if (!isValid) {
+      setLoading(false);
+      return;
+    }
 
     const params = {
       from_name: data.get("name"),
@@ -33,12 +73,24 @@ export default function Footer() {
       await emailjs.send(SERVICE, TEMPLATE, params, PUBLICKEY);
       setMsg("Message sent!");
       e.target.reset();
+
+      // CLEAR ERRORS AFTER SUCCESS
+      setErrors({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err);
       setMsg("Failed to send message.");
     }
 
     setLoading(false);
+  }
+
+  // Handle typing = clear specific field error
+  function handleInputChange(e) {
+    const { name, value } = e.target;
+    setErrors((prev) => ({
+      ...prev,
+      [name]: value.trim() ? "" : prev[name],
+    }));
   }
 
   return (
@@ -84,16 +136,32 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* RIGHT COLUMN */}
+        {/* RIGHT COLUMN — FORM */}
         <form className="footer-form" onSubmit={handleFooterSubmit}>
           <label>Name</label>
-          <input name="name" placeholder="your name" required />
+          <input
+            name="name"
+            placeholder="your name"
+            onChange={handleInputChange}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
 
           <label>Email</label>
-          <input name="email" type="email" placeholder="name@email.com" required />
+          <input
+            name="email"
+            type="email"
+            placeholder="name@email.com"
+            onChange={handleInputChange}
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
 
           <label>Message</label>
-          <textarea name="message" placeholder="Hello Cosmas…" required />
+          <textarea
+            name="message"
+            placeholder="Hello Cosmas…"
+            onChange={handleInputChange}
+          />
+          {errors.message && <p className="error">{errors.message}</p>}
 
           <button className="btn submit" disabled={loading}>
             {loading ? "Sending..." : "SUBMIT"}

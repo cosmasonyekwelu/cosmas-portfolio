@@ -94,12 +94,19 @@
   border-radius: 999px;
 }
 
-.success {
-  margin-top: 10px;
-  color: #baf08b;
-  font-weight: 600;
+
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 10px;
 }
 
+.success {
+  color: #d7ff66;
+  font-size: 14px;
+  margin-top: 10px;
+}
 .footer-bottom {
   margin-top: 50px;
   text-align: center;

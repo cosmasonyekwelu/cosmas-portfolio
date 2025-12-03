@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import '../styles/contact.css';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../styles/contact.css";
 
 const SERVICE = import.meta.env.VITE_EMAILJS_SERVICE;
 const TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE;
@@ -8,44 +8,59 @@ const PUBLICKEY = import.meta.env.VITE_EMAILJS_PUBLICKEY;
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({
     loading: false,
     success: null,
-    message: ''
+    message: "",
   });
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  // Validate fields
   function validate() {
     const e = {};
-    if (!form.name.trim()) e.name = 'Name is required';
-    if (!form.email.trim()) e.email = 'Email is required';
-    else if (!emailRegex.test(form.email)) e.email = 'Please enter a valid email';
-    if (!form.subject.trim()) e.subject = 'Subject is required';
-    if (!form.message.trim()) e.message = 'Message is required';
+
+    if (!form.name.trim()) e.name = "Name is required";
+    if (!form.email.trim()) e.email = "Email is required";
+    else if (!emailRegex.test(form.email))
+      e.email = "Please enter a valid email";
+
+    if (!form.subject.trim()) e.subject = "Subject is required";
+    if (!form.message.trim()) e.message = "Message is required";
 
     setErrors(e);
     return Object.keys(e).length === 0;
   }
 
+  // Clear specific error on typing
+  function handleChange(field, value) {
+    setForm((prev) => ({ ...prev, [field]: value }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [field]: value.trim() ? "" : prev[field],
+    }));
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
+
     if (!validate()) return;
 
-    setStatus({ loading: true, success: null, message: '' });
+    setStatus({ loading: true, success: null, message: "" });
 
     const params = {
       from_name: form.name,
       from_email: form.email,
       subject: form.subject,
-      message: form.message
+      message: form.message,
     };
 
     try {
@@ -54,10 +69,11 @@ export default function Contact() {
       setStatus({
         loading: false,
         success: true,
-        message: 'Message sent! Thank you.'
+        message: "Message sent! Thank you.",
       });
 
-      setForm({ name: '', email: '', subject: '', message: '' });
+      setForm({ name: "", email: "", subject: "", message: "" });
+      setErrors({});
 
     } catch (error) {
       console.error(error);
@@ -65,7 +81,7 @@ export default function Contact() {
       setStatus({
         loading: false,
         success: false,
-        message: 'Failed to send message. Try again.'
+        message: "Failed to send message. Try again.",
       });
     }
   }
@@ -73,16 +89,18 @@ export default function Contact() {
   return (
     <main className="contact-page container">
       <section className="contact-top">
-
         <div className="contact-intro">
           <h1>LET'S CONNECT</h1>
           <p>
-            Say hello at{' '}
+            Say hello at{" "}
             <a href="mailto:onyecosmas@gmail.com">onyecosmas@gmail.com</a>
           </p>
           <p>
-            For more info, here's my{' '}
-            <a href="https://www.dropbox.com/scl/fi/a311x0bp5o0dmzkgwobzb/Cosmas-Onyekwelu-CV.pdf?rlkey=ia5l7s41nplblbbrz8970y34s&st=z8g2hku9&dl=0">
+            For more info, here's my{" "}
+            <a
+              href="https://www.dropbox.com/scl/fi/a311x0bp5o0dmzkgwobzb/Cosmas-Onyekwelu-CV.pdf?rlkey=ia5l7s41nplblbbrz8970y34s&st=z8g2hku9&dl=0"
+              target="_blank"
+            >
               resume
             </a>
           </p>
@@ -92,21 +110,21 @@ export default function Contact() {
           <label>Name</label>
           <input
             value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            onChange={(e) => handleChange("name", e.target.value)}
           />
           {errors.name && <small className="err">{errors.name}</small>}
 
           <label>Email</label>
           <input
             value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            onChange={(e) => handleChange("email", e.target.value)}
           />
           {errors.email && <small className="err">{errors.email}</small>}
 
           <label>Subject</label>
           <input
             value={form.subject}
-            onChange={(e) => setForm({ ...form, subject: e.target.value })}
+            onChange={(e) => handleChange("subject", e.target.value)}
           />
           {errors.subject && <small className="err">{errors.subject}</small>}
 
@@ -114,18 +132,18 @@ export default function Contact() {
           <textarea
             rows="6"
             value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            onChange={(e) => handleChange("message", e.target.value)}
           />
           {errors.message && <small className="err">{errors.message}</small>}
 
           <div className="form-actions">
             <button className="btn primary" type="submit" disabled={status.loading}>
-              {status.loading ? 'Sending...' : 'SUBMIT'}
+              {status.loading ? "Sending..." : "SUBMIT"}
             </button>
           </div>
 
           {status.message && (
-            <p className={status.success ? 'success' : 'error'}>
+            <p className={status.success ? "success" : "error"}>
               {status.message}
             </p>
           )}

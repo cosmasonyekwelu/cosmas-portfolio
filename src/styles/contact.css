@@ -44,20 +44,22 @@
 }
 
 .err {
-  color: #ff7b7b;
+  color: #ff6b6b;
   font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 10px;
 }
 
 .success {
-  color: #baf08b;
-  font-weight: 700;
-  margin-top: 12px;
+  color: #d7ff66;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .error {
-  color: #ff8b8b;
-  font-weight: 700;
-  margin-top: 12px;
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 @media (max-width: 900px) {
