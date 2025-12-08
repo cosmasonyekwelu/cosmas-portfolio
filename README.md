@@ -8,7 +8,7 @@ The portfolio highlights my real-world MERN projects, technical strengths, desig
 
 ## 🚀 **Live Website**
 
-🔗 **[https://cosmasportfolio.vercel.app/](https://cosmasportfolio.vercel.app/)**
+🔗 **[cosmas-portfolio-six.vercel.app](cosmas-portfolio-six.vercel.app)**
 (Hosted on Vercel)
 
 ---
