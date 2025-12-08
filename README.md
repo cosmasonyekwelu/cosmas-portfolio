@@ -1,16 +1,153 @@
-# React + Vite
+# **Cosmas Onyekwelu – Developer Portfolio**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and fully-featured personal portfolio website built to showcase my skills, projects, and professional experience as a **Full-Stack / Front-End Software Engineer**.
 
-Currently, two official plugins are available:
+The portfolio highlights my real-world MERN projects, technical strengths, design values, and provides a direct contact mechanism through an email-integrated form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 **Live Website**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **[https://cosmasportfolio.vercel.app/](https://cosmasportfolio.vercel.app/)**
+(Hosted on Vercel)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧭 **Pages & Site Structure**
+
+| Page        | Description                                            |
+| ----------- | ------------------------------------------------------ |
+| **Home**    | Hero intro, featured projects, short about section     |
+| **Work**    | Full project case studies + GitHub + Live Demo         |
+| **About**   | Extended bio, professional journey, skills, experience |
+| **Contact** | Contact form with email integration + social links     |
+
+---
+
+## ✨ **Key Features**
+
+### 🔹 Modern UI & Responsive Design
+
+- Mobile-first, seamless responsiveness
+- Dark theme optimized for readability
+- Clean typography using **Bebas Neue + Manrope**
+
+### 🔹 Featured Project Portfolio
+
+- Screenshots, live links, GitHub links
+- Real production-level deployments
+- MERN stack applications with API integrations
+
+### 🔹 Professional Contact Form
+
+- Built using React controlled components
+- EmailJS integration (no server required)
+- Form validation + success & error messages
+
+### 🔹 Social & Developer Branding
+
+- LinkedIn, GitHub, Twitter (X), Instagram
+- Simple and accessible icon-based links
+
+### 🔹 SEO & Accessibility
+
+- Structured components
+- Accessible color contrast
+- Mobile viewport optimization
+
+---
+
+## 🛠️ **Tech Stack**
+
+### **Frontend**
+
+- React (Vite)
+- React Router
+- CSS3 with component-based layouts
+- React Icons
+
+### **Deployment & Hosting**
+
+- Vercel
+
+### **Email Integration**
+
+- EmailJS
+
+---
+
+## ⚙️ **Installation & Local Setup**
+
+```bash
+# Clone the repository
+git clone https://github.com/cosmasonyekwelu/cosmas-portfolio.git
+
+# Navigate into project
+cd cosmas-portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 🔐 **Environment Variables (Required)**
+
+This project uses EmailJS.
+
+Create a `.env` file in the root:
+
+```
+VITE_EMAILJS_SERVICE=your_service_id
+VITE_EMAILJS_TEMPLATE=your_template_id
+VITE_EMAILJS_PUBLICKEY=your_public_key
+```
+
+---
+
+## 📁 **Project Structure**
+
+```
+src/
+ ├─ assets/          # Images & static assets
+ ├─ components/      # Reusable UI components
+ ├─ pages/           # Home, About, Work, Contact
+ ├─ styles/          # CSS styling modules
+ ├─ App.jsx          # Router + layout
+ ├─ main.jsx         # App entry
+```
+
+---
+
+## 🧪 **Email Testing**
+
+Send a test message from the live or local website.
+You should receive it in the configured inbox via EmailJS.
+
+---
+
+## ⚡ Performance Notes
+
+- Optimized image sizes
+- Lazy loading via modern browsers
+- Minimal client logic
+
+---
+
+## 📬 Contact
+
+**Cosmas Onyekwelu**
+📧 [onyecosmas@gmail.com](mailto:onyecosmas@gmail.com)
+🔗 [https://www.linkedin.com/in/cosmasonyekwelu](https://www.linkedin.com/in/cosmasonyekwelu)
+🔗 [https://github.com/cosmasonyekwelu](https://github.com/cosmasonyekwelu)
+
+---
+
+## 🙏 Acknowledgements
+
+This portfolio was inspired by top-tier developer portfolio standards — focused on clarity, personality, and professionalism.
+
+---
