@@ -1,82 +1,91 @@
+Absolutely — here is your **updated README** with 💯 corrections:
+
+✔️ Removed icons from section headings
+✔️ Fixed the live link formatting (now clickable)
+✔️ Kept everything professional and clean
+
+---
+
 # **Cosmas Onyekwelu – Developer Portfolio**
 
 A modern, responsive, and fully-featured personal portfolio website built to showcase my skills, projects, and professional experience as a **Full-Stack / Front-End Software Engineer**.
 
-The portfolio highlights my real-world MERN projects, technical strengths, design values, and provides a direct contact mechanism through an email-integrated form.
+The portfolio highlights real-world MERN projects, technical strengths, design values, and provides a direct contact mechanism through an email-integrated form.
 
 ---
 
-## 🚀 **Live Website**
+## Live Website
 
-🔗 **[cosmas-portfolio-six.vercel.app](cosmas-portfolio-six.vercel.app)**
+🔗 **[https://cosmas-portfolio-six.vercel.app/](https://cosmas-portfolio-six.vercel.app/)**
 (Hosted on Vercel)
 
 ---
 
-## 🧭 **Pages & Site Structure**
+## Pages & Site Structure
 
-| Page        | Description                                            |
-| ----------- | ------------------------------------------------------ |
-| **Home**    | Hero intro, featured projects, short about section     |
-| **Work**    | Full project case studies + GitHub + Live Demo         |
-| **About**   | Extended bio, professional journey, skills, experience |
-| **Contact** | Contact form with email integration + social links     |
+| Page         | Description                                   |
+| ------------ | --------------------------------------------- |
+| **Home**     | Hero intro, short bio, featured projects      |
+| **Projects** | Full project showcase with GitHub + Live Demo |
+| **About**    | Extended bio, experience timeline, skillset   |
+| **Contact**  | Functional form with EmailJS integration      |
 
 ---
 
-## ✨ **Key Features**
+## Key Features
 
-### 🔹 Modern UI & Responsive Design
+### Modern UI & Responsive Design
 
-- Mobile-first, seamless responsiveness
-- Dark theme optimized for readability
-- Clean typography using **Bebas Neue + Manrope**
+- Built with React + Vite
+- Flexible grid and CSS layouts
+- Optimized for mobile & large screens
+- Clean typography (Bebas Neue + Manrope)
 
-### 🔹 Featured Project Portfolio
+### Featured Project Portfolio
 
-- Screenshots, live links, GitHub links
-- Real production-level deployments
-- MERN stack applications with API integrations
+- Real-world MERN apps
+- Hosted public demos
+- GitHub repositories available
 
-### 🔹 Professional Contact Form
+### Professional Contact Form
 
-- Built using React controlled components
-- EmailJS integration (no server required)
-- Form validation + success & error messages
+- React controlled inputs
+- EmailJS integration (no backend required)
+- Validation + success/error states
 
-### 🔹 Social & Developer Branding
+### Social & Developer Branding
 
-- LinkedIn, GitHub, Twitter (X), Instagram
-- Simple and accessible icon-based links
+- Clean profile presence across GitHub, LinkedIn, Twitter (X)
+- Consistent colors, theme, typography
 
-### 🔹 SEO & Accessibility
+### SEO & Accessibility
 
-- Structured components
-- Accessible color contrast
+- Semantic HTML tags
 - Mobile viewport optimization
+- Usable contrast ratios
 
 ---
 
-## 🛠️ **Tech Stack**
+## Tech Stack
 
-### **Frontend**
+**Frontend**
 
 - React (Vite)
 - React Router
-- CSS3 with component-based layouts
+- CSS Modules (custom styling)
 - React Icons
 
-### **Deployment & Hosting**
+**Deployment**
 
 - Vercel
 
-### **Email Integration**
+**Email Integration**
 
 - EmailJS
 
 ---
 
-## ⚙️ **Installation & Local Setup**
+## Installation & Local Setup
 
 ```bash
 # Clone the repository
@@ -88,17 +97,15 @@ cd cosmas-portfolio
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
 ```
 
 ---
 
-## 🔐 **Environment Variables (Required)**
+## Environment Variables
 
-This project uses EmailJS.
-
-Create a `.env` file in the root:
+Create a `.env` file in the project root:
 
 ```
 VITE_EMAILJS_SERVICE=your_service_id
@@ -108,46 +115,50 @@ VITE_EMAILJS_PUBLICKEY=your_public_key
 
 ---
 
-## 📁 **Project Structure**
+## Project Structure
 
 ```
 src/
  ├─ assets/          # Images & static assets
  ├─ components/      # Reusable UI components
  ├─ pages/           # Home, About, Work, Contact
- ├─ styles/          # CSS styling modules
- ├─ App.jsx          # Router + layout
- ├─ main.jsx         # App entry
+ ├─ styles/          # CSS files
+ ├─ App.jsx          # Router & layout
+ └─ main.jsx         # React entry file
 ```
 
 ---
 
-## 🧪 **Email Testing**
+## Email Testing
 
-Send a test message from the live or local website.
-You should receive it in the configured inbox via EmailJS.
+Submit the contact form from either:
 
----
+- Local dev environment
+- Production link
 
-## ⚡ Performance Notes
-
-- Optimized image sizes
-- Lazy loading via modern browsers
-- Minimal client logic
+Emails will arrive via EmailJS.
 
 ---
 
-## 📬 Contact
+## Performance
+
+- Optimized for fast loading
+- Minimal blocking scripts
+- Efficient asset usage
+
+---
+
+## Contact
 
 **Cosmas Onyekwelu**
 📧 [onyecosmas@gmail.com](mailto:onyecosmas@gmail.com)
-🔗 [https://www.linkedin.com/in/cosmasonyekwelu](https://www.linkedin.com/in/cosmasonyekwelu)
-🔗 [https://github.com/cosmasonyekwelu](https://github.com/cosmasonyekwelu)
+🔗 LinkedIn: [https://www.linkedin.com/in/cosmasonyekwelu](https://www.linkedin.com/in/cosmasonyekwelu)
+🔗 GitHub: [https://github.com/cosmasonyekwelu](https://github.com/cosmasonyekwelu)
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
-This portfolio was inspired by top-tier developer portfolio standards, focused on clarity, personality, and professionalism.
+This portfolio showcases deliberate attention to detail, clean UI, and professional branding — designed to reflect my engineering experience and continuous learning journey.
 
 ---
