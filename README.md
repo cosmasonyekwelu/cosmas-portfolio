@@ -1,11 +1,3 @@
-Absolutely — here is your **updated README** with 💯 corrections:
-
-✔️ Removed icons from section headings
-✔️ Fixed the live link formatting (now clickable)
-✔️ Kept everything professional and clean
-
----
-
 # **Cosmas Onyekwelu – Developer Portfolio**
 
 A modern, responsive, and fully-featured personal portfolio website built to showcase my skills, projects, and professional experience as a **Full-Stack / Front-End Software Engineer**.
