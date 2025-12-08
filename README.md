@@ -148,6 +148,6 @@ You should receive it in the configured inbox via EmailJS.
 
 ## 🙏 Acknowledgements
 
-This portfolio was inspired by top-tier developer portfolio standards — focused on clarity, personality, and professionalism.
+This portfolio was inspired by top-tier developer portfolio standards, focused on clarity, personality, and professionalism.
 
 ---
