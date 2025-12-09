@@ -13,7 +13,7 @@ export default function Footer() {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 
-  // NEW: validation state
+
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -25,12 +25,12 @@ export default function Footer() {
   function validateForm(data) {
     const newErrors = {};
 
-    // NAME
+ 
     if (!data.get("name")?.trim()) {
       newErrors.name = "Name is required.";
     }
 
-    // EMAIL
+ 
     const email = data.get("email")?.trim();
     if (!email) {
       newErrors.email = "Email is required.";
@@ -38,7 +38,7 @@ export default function Footer() {
       newErrors.email = "Enter a valid email address.";
     }
 
-    // MESSAGE
+  
     if (!data.get("message")?.trim()) {
       newErrors.message = "Message cannot be empty.";
     }
@@ -55,7 +55,7 @@ export default function Footer() {
 
     const data = new FormData(e.target);
 
-    // VALIDATE FIRST
+ 
     const isValid = validateForm(data);
     if (!isValid) {
       setLoading(false);
@@ -74,7 +74,7 @@ export default function Footer() {
       setMsg("Message sent!");
       e.target.reset();
 
-      // CLEAR ERRORS AFTER SUCCESS
+  
       setErrors({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err);
@@ -84,7 +84,7 @@ export default function Footer() {
     setLoading(false);
   }
 
-  // Handle typing = clear specific field error
+ 
   function handleInputChange(e) {
     const { name, value } = e.target;
     setErrors((prev) => ({
