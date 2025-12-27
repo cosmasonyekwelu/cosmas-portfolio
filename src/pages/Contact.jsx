@@ -98,7 +98,7 @@ export default function Contact() {
           <p>
             For more info, here's my{" "}
             <a
-              href="https://www.dropbox.com/scl/fi/a311x0bp5o0dmzkgwobzb/Cosmas-Onyekwelu-CV.pdf?rlkey=ia5l7s41nplblbbrz8970y34s&st=z8g2hku9&dl=0"
+              href="https://www.dropbox.com/scl/fi/wbzhd8c9ai7glfcw29wgc/dec2025CV.pdf?rlkey=ixxqe5x2mi00lmabjfa0vz826&st=yo2rli9j&dl=0"
               target="_blank"
             >
               resume

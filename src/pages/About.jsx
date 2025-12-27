@@ -11,7 +11,7 @@ export default function About(){
           <h2 className='about-headline'>I am a full-stack engineer based in Lagos. Has Mechanical Engineering background.</h2>
           <p className='muted'>I am looking for exciting opportunities. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently exploring Reactjs, Webflow and a bit of Designing.</p>
           <div className='about-actions'>
-            <Button text='DOWNLOAD RESUME' href='https://www.dropbox.com/scl/fi/a311x0bp5o0dmzkgwobzb/Cosmas-Onyekwelu-CV.pdf?rlkey=ia5l7s41nplblbbrz8970y34s&st=xf7v3124&dl=0' />
+            <Button text='DOWNLOAD RESUME' href='https://www.dropbox.com/scl/fi/wbzhd8c9ai7glfcw29wgc/dec2025CV.pdf?rlkey=ixxqe5x2mi00lmabjfa0vz826&st=yo2rli9j&dl=0' />
             <SocialIcons />
           </div>
         </div>
